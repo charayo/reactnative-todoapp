@@ -15,14 +15,7 @@ import TodoCard from "./components/todoCard";
 
 export default function App() {
   const [todos, setTodos] = useState([
-    { text: "Go to 1st Avenue", key: "1" },
-    { text: "Go to 3rd Avenue", key: "2" },
-    { text: "Worpress Test", key: "3" },
-    { text: "Bathe", key: "4" },
-    { text: "Step out", key: "5" },
-    { text: "Step out oo", key: "6" },
-    { text: "Come in", key: "7" },
-    { text: "Come in 1", key: "8" },
+    { text: "Sample Todo Task", key: "1" },
   ]);
   const [textInp, setTextInp] = useState("");
   const onDelete = (id) => {
@@ -33,7 +26,7 @@ export default function App() {
     // console.log(param);
   };
   const onHandleAdd = () => {
-    if(textInp > 3){
+    if(textInp.length > 3){
       const newValue = { text: textInp, key: textInp + 1 };
       setTodos((prevTodos) => [newValue, ...prevTodos] );
     }else{
